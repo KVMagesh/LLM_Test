@@ -28,8 +28,8 @@ from utils.prompter import Prompter
 def train(
     # model/data params
     base_model: str = "",  # the only required argument
-    data_path: str = "yahma/alpaca-cleaned",
-    output_dir: str = "./lora-alpaca",
+    data_path: str = "magesh/cleaned",
+    output_dir: str = "./model",
     # training hyperparams
     batch_size: int = 128,
     micro_batch_size: int = 4,
@@ -55,11 +55,11 @@ def train(
     wandb_watch: str = "",  # options: false | gradients | all
     wandb_log_model: str = "",  # options: false | true
     resume_from_checkpoint: str = None,  # either training checkpoint or final adapter
-    prompt_template_name: str = "alpaca",  # The prompt template to use, will default to alpaca.
+    prompt_template_name: str = "magesh_prompt",  # The prompt template to use, will default to alpaca.
 ):
     if int(os.environ.get("LOCAL_RANK", 0)) == 0:
         print(
-            f"Training Alpaca-LoRA model with params:\n"
+            f"Training LLAMA_13B-LoRA model with params:\n"
             f"base_model: {base_model}\n"
             f"data_path: {data_path}\n"
             f"output_dir: {output_dir}\n"
