@@ -192,8 +192,8 @@ def main(
 #                label="Output",
 #            )
 #        ],
-        title="🦙🌲 Alpaca-LoRA",
-        description="Alpaca-LoRA is a 7B-parameter LLaMA model finetuned to follow instructions. It is trained on the [Stanford Alpaca](https://github.com/tatsu-lab/stanford_alpaca) dataset and makes use of the Huggingface LLaMA implementation. For more information, please visit [the project's website](https://github.com/tloen/alpaca-lora).",  # noqa: E501
+        title="🦙🌲 LLAMA 3B Parameter Model -LoRA",
+        description="Magesh_Fine_Tuned is a 3B-parameter LLaMA model finetuned to follow instructions. It is trained on the sample dataset and makes use of the Huggingface LLaMA implementation. For more information, please visit [the project's website](https://github.com/kvmagesh/LLM_Test).",  # noqa: E501
     ).queue().launch(server_name="0.0.0.0", share=share_gradio)
     # Old testing code follows.
 
