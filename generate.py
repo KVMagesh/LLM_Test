@@ -156,6 +156,7 @@ def main(
             )
         s = generation_output.sequences[0]
         output = tokenizer.decode(s)
+        
         yield prompter.get_response(output)
 
     gr.Interface(
@@ -184,12 +185,13 @@ def main(
             ),
             gr.components.Checkbox(label="Stream output"),
         ],
-        outputs=[
-            gr.inputs.Textbox(
-                lines=5,
-                label="Output",
-            )
-        ],
+        outputs="text",
+#        outputs=[
+#            gr.inputs.Textbox(
+#                lines=5,
+#                label="Output",
+#            )
+#        ],
         title="🦙🌲 Alpaca-LoRA",
         description="Alpaca-LoRA is a 7B-parameter LLaMA model finetuned to follow instructions. It is trained on the [Stanford Alpaca](https://github.com/tatsu-lab/stanford_alpaca) dataset and makes use of the Huggingface LLaMA implementation. For more information, please visit [the project's website](https://github.com/tloen/alpaca-lora).",  # noqa: E501
     ).queue().launch(server_name="0.0.0.0", share=share_gradio)
