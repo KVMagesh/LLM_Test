@@ -4,7 +4,6 @@ Created on Tue Oct 31 19:12:46 2023
 
 @author: Mahesh
 """
-
 from langchain.embeddings import HuggingFaceInstructEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.vectorstores import Chroma 
@@ -52,7 +51,7 @@ vectordb = Chroma.from_documents(docs, embedding=hf_embedding,collection_name=co
                                       persist_directory=persist_directory)
 vectordb.persist()
 print('done')
-query = "what is Accidental Death Benefit?"
+query = "what is the lump sum benefit paid for terminal illness?"
 print(query)
 search = vectordb.similarity_search(query, k=2)
 print('search result:',search)
