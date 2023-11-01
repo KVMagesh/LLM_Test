@@ -44,7 +44,7 @@ directory='./file'
 loader = PyPDFDirectoryLoader(directory)
 documents = loader.load()
 collection_name='canara_kdb'
-persist_directory="./canara/kdb/"+collection_name
+persist_directory="./canarakbd/"+collection_name
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=250, chunk_overlap=50)
 print('text_splitter:',text_splitter)
 docs = text_splitter.split_documents(documents)
@@ -61,7 +61,7 @@ search = db.similarity_search(query, k=2)
 print('search result:',search)
 
 target_source_chunks = 4
-model_path = './magesh_tuned_llama_3b'
+model_path = './LLM_Test/magesh_tuned_llama_3b'
 retriever = db.as_retriever(search_kwargs={"k": target_source_chunks})
 callback_manager = CallbackManager([StreamingStdOutCallbackHandler()])
 
