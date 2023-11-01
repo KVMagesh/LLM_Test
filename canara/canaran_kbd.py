@@ -9,7 +9,11 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.vectorstores import Chroma 
 #from dotenv import load_dotenv, find_dotenv
 from langchain.document_loaders import PyPDFDirectoryLoader
-#import os
+from langchain import LlamaCpp
+from langchain.callbacks.manager import CallbackManager
+from langchain.chains import RetrievalQA
+from langchain.embeddings import HuggingFaceEmbeddings
+from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
 '''
 folder = ''
 #folder = './pdf'
@@ -47,11 +51,29 @@ docs = text_splitter.split_documents(documents)
 print('docs:',docs)
 hf_embedding = HuggingFaceInstructEmbeddings()
 print('embedding:',hf_embedding)
-vectordb = Chroma.from_documents(docs, embedding=hf_embedding,collection_name=collection_name, 
+db = Chroma.from_documents(docs, embedding=hf_embedding,collection_name=collection_name, 
                                       persist_directory=persist_directory)
-vectordb.persist()
+db.persist()
 print('done')
 query = "what is the lump sum benefit paid for terminal illness?"
 print(query)
-search = vectordb.similarity_search(query, k=2)
+search = db.similarity_search(query, k=2)
 print('search result:',search)
+
+target_source_chunks = 4
+model_path = './magesh_tuned_llama_3b'
+retriever = db.as_retriever(search_kwargs={"k": target_source_chunks})
+callback_manager = CallbackManager([StreamingStdOutCallbackHandler()])
+
+llm = LlamaCpp(
+        model_path=model_path,
+        n_gpu_layers=40,
+        n_batch=512,
+        n_ctx=2048,
+        f16_kv=True,  # MUST set to True, otherwise you will run into problem after a couple of calls
+        callback_manager=callback_manager,
+        verbose=True,
+    )
+qa = RetrievalQA.from_chain_type(llm=llm, chain_type="stuff", retriever=retriever)
+res = qa(query)
+answer=res['result']
