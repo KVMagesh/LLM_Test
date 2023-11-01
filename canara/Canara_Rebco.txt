@@ -1,0 +1,42 @@
+[
+     {
+        "instruction": "How to buy iSelect Smart360 Term Plan?",
+        "input": "",
+        "output": "You can buy iSelect Smart360 Term Plan online on our website."
+    },
+    {
+        "instruction": "How does the plan work?",
+        "input": "",
+        "output": "Select any of the plan options from – Life Secure, Life Secure with Income or Life Secure with Return of Premium. Choose coverage option of either level or increasing as per your need. Select the optional in-built covers as per your life insurance coverage needs. If you have a spouse, you may add them in the same policy (Spouse cover shall be available only under plan option Life Secure). Select how you want the Death Benefit to be paid out – Lump Sum, Monthly, or Part Lump Sum and Part Monthly Income. Submit the proposal form along with other required information for further processing."
+    },
+    {
+        "instruction": "What is the eligibility criteria for buying iSelect Smart360 Term Plan?",
+        "input": "",
+        "output": "You should be between 18-65 years of age to buy iSelect Smart360 Term Plan."
+    },
+    {
+        "instruction": "What optional in-built covers are available with iSelect Smart360 Term Plan?",
+        "input": "",
+        "output": "There are 8 optional in-built covers available with iSelect Smart360 Term Plan, and they are:\n\nAccidental Death Benefit (ADB)\nAccidental Total & Permanent Disability (ATPD) Premium Protection\nAccidental Total & Permanent Disability (ATPD) Premium Protection Plus\nCritical Illness (CI) Premium Protection\nCritical Illness (CI) Premium Protection Plus\nTerminal Illness (TI)\nChild Care Benefit (CCB)\nBlock your Premium (BYP) Benefit"
+    },
+   {
+        "instruction": "How to block your premium rate with iSelect Smart360 Term Plan?",
+        "input": "",
+        "output": "Under this benefit, Life Assured/Working Spouse, as applicable, will have option to block their premium rate of base Death Benefit at policy inception for a period of 5 Years during which Life Assured/Working Spouse, as applicable, can request for increase in benefit amount payable on death (BYP Sum Assured) up to 25%/50%/75%/100% of the Sum Assured as chosen at policy inception for respective live(s), without any additional underwriting and irrespective of the attained age, subject to applicable conditions mentioned under the Sales Brochure."
+    },
+   {
+        "instruction": "How does 100% Return of Premium work in iSelect Smart360 Term Plan?",
+        "input": "",
+        "output": "Return of Premium is available under Life Secure with Return of Premium option of iSelect Smart360 Term Plan. Under this option, in case Life Assured outlives the Policy Term, Sum Assured on Maturity will be paid to the Policyholder which would be 100% of the Total Premiums paid excluding taxes and underwriting extra premiums, if any."
+    },
+   {
+        "instruction": "Does iSelect Smart360 Term Plan offer tax benefits?",
+        "input": "",
+        "output": "Yes, you can get tax benefits up to Rs. 46,80012 with iSelect Smart360 Term Plan. Please note that tax benefits maybe available as per the prevailing Income Tax laws and are subject to amendments from time to time. For tax related queries, contact your independent tax advisor."
+    },
+   {
+        "instruction": "How many Critical Illness are covered in iSelect Smart360 Term Plan and what are they?",
+        "input": "",
+        "output": "40 Critical Illnesses (CI) are covered in iSelect Smart360 Term Plan. Following is the list of Critical Illnesses covered under Critical Illness Premium Protection and Premium Protection Plus optional in-built cover:\n\nCancer of Specified Severity\nMyocardial Infarction (First Heart Attack of Specific Severity)\nOpen Chest CABG\nOpen Heart Replacement or Repair of Heart Valves\nComa of Specified Severity\nKidney Failure Requiring Regular Dialysis\nStroke Resulting in Permanent Symptoms\nMajor Organ/Bone Marrow Transplant\nPermanent Paralysis of Limbs\nMotor Neuron Disease with Permanent Symptoms\nMultiple Sclerosis with Persisting Symptoms\nBenign Brain Tumor\nBlindness\nDeafness\nEnd Stage Lung Failure\nEnd Stage Liver Failure\nLoss of Limbs\nLoss of Speech\nMajor Head Trauma\nPrimary (Idiopathic) Pulmonary Hypertension\nThird Degree Burns\nAlzheimer’s Disease\nAplastic Anemia\nMedullary Cystic Disease\nParkinson’s Disease\nApallic Syndrome\nMajor Surgery of the Aorta\nFulminant Viral Hepatitis – Resulting in Acute Liver Failure\nCardiomyopathy\nMuscular Dystrophy\nPoliomyelitis – Resulting in Paralysis\nChronic Recurring Pancreatitis\nBacterial Meningitis"
+}
+]
