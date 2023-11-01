@@ -37,17 +37,22 @@ for folder in sub_folders:
         vectordb.persist()
 '''     
 
-directory='./pdf'
+directory='./file'
 loader = PyPDFDirectoryLoader(directory)
 documents = loader.load()
-persist_directory="./canara/"
 collection_name='canara_kdb'
-text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=50)
+persist_directory="./canara/kdb/"+collection_name
+text_splitter = RecursiveCharacterTextSplitter(chunk_size=250, chunk_overlap=50)
+print('text_splitter:',text_splitter)
 docs = text_splitter.split_documents(documents)
+print('docs:',docs)
 hf_embedding = HuggingFaceInstructEmbeddings()
+print('embedding:',hf_embedding)
 vectordb = Chroma.from_documents(docs, embedding=hf_embedding,collection_name=collection_name, 
                                       persist_directory=persist_directory)
 vectordb.persist()
+print('done')
 query = "what is Accidental Death Benefit?"
+print(query)
 search = vectordb.similarity_search(query, k=2)
-print(search)
+print('search result:',search)
